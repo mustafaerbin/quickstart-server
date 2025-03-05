@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+
+        <JDBC name="databaseAppender" tableName="error_logs">
+            <ConnectionFactory class="com.tr.innova.common.configuration.Log4jDataSourceConnectionFactory"
+                               method="getDataSource"/>
+
+            <Column name="timestamp" literal="CURRENT_TIMESTAMP"/>
+            <Column name="level" pattern="%level" isUnicode="false"/>
+            <Column name="logger" pattern="%logger" isUnicode="false"/>
+            <Column name="message" pattern="%message" isUnicode="false"/>
+            <Column name="method" pattern="%C{1}.%M" isUnicode="false"/>
+            <Column name="line" pattern="%L" isUnicode="false"/>
+            <Column name="exception" pattern="%ex{full}" isUnicode="false"/>
+            <Column name="create_date" literal="CURRENT_TIMESTAMP"/>
+            <Column name="durum" literal="'AKTIF'"/>
+            <Column name="version" literal="0"/>
+
+        </JDBC>
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="databaseAppender" level="error"/>
+        </Root>
+    </Loggers>
+</Configuration>
+
+

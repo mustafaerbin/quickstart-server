@@ -1,0 +1,210 @@
+model:
+  - label: "Anasayfa"
+    permissions: [ "GRANT_APP" ]
+    items:
+      - label: "Gösterge Paneli"
+        icon: "pi pi-fw pi-home"
+        permissions: [ "GRANT_APP" ]
+        routerLink: [ "/dashboard" ]
+
+  - label: "1. PAGE"
+    permissions: [ "GRANT_APP" ]
+    items:
+      - label: "Entegrasyon İşlemleri"
+        icon: "pi pi-fw pi-clone"
+        routerLink: [ "/uikit/entegrasyonlar" ]
+        permissions: [ "GRANT_APP" ]
+      - label: "Rapor İşlemleri"
+        icon: "pi pi-fw pi-file"
+        routerLink: [ "/uikit/raporlar" ]
+        permissions: [ "GRANT_APP" ]
+      - label: "Bildirimler"
+        icon: "pi pi-fw pi-bell"
+        routerLink: [ "/uikit/siparisler" ]
+        permissions: [ "GRANT_APP" ]
+      - label: "Tanımlamalar"
+        icon: "pi pi-fw pi-cart-minus"
+        permissions: [ "GRANT_APP" ]
+  - label: "Rapor Modülü"
+    permissions: [ "GRANT_APP" ]
+    items:
+      - label: "x İşlemleri"
+        icon: "pi pi-fw pi-cart-minus"
+        permissions: [ "GRANT_APP" ]
+        items:
+          - label: "DENEME"
+            icon: "pi pi-fw pi-times-circle"
+            permissions: [ "GRANT_APP" ]
+            routerLink: [ "" ]
+  - label: "SİSTEM"
+    permissions: [ "GRANT_APP" ]
+    items:
+      - label: "Kullanıcı/Rol/Yetki İşlemleri"
+        icon: "pi pi-fw pi-user-edit"
+        permissions: [ "GRANT_APP" ]
+        items:
+          - label: "Kullanıcı/Rol İşlemleri"
+            icon: "pi pi-fw pi-cart-minus"
+            permissions: [ "GRANT_APP" ]
+            routerLink: [ "/uikit/kullanici-rol-islemleri" ]
+          - label: "Rol/Yetki İşlemleri"
+            icon: "pi pi-fw pi-times-circle"
+            permissions: [ "GRANT_APP" ]
+            routerLink: [ "" ]
+      - label: "Ayarlar"
+        icon: "pi pi-fw pi-wrench"
+        routerLink: [ "/uikit/siparisler" ]
+        permissions: [ "GRANT_APP" ]
+      - label: "Hata Kayitlari"
+        icon: "pi pi-fw pi-exclamation-circle"
+        routerLink: [ "/uikit/hata-loglari-islemleri" ]
+        permissions: [ "GRANT_APP" ]
+  - label: "UI COMPONENTS"
+    permissions: [ "GRANT_APP" ]
+    items:
+      - label: "Form Layout"
+        icon: "pi pi-fw pi-cart-minus"
+        routerLink: [ "/uikit/formlayout" ]
+        permissions: [ "GRANT_APP" ]
+      - label: "Input"
+        icon: "pi pi-fw pi-check-square"
+        routerLink: [ "/uikit/input" ]
+        permissions: [ "GRANT_APP" ]
+      - label: "Button"
+        icon: "pi pi-fw pi-mobile"
+        routerLink: [ "/uikit/button" ]
+        permissions: [ "GRANT_APP" ]
+      - label: "Table"
+        icon: "pi pi-fw pi-table"
+        routerLink: [ "/uikit/table" ]
+        permissions: [ "GRANT_APP" ]
+      - label: "List"
+        icon: "pi pi-fw pi-list"
+        routerLink: [ "/uikit/list" ]
+        permissions: [ "GRANT_APP" ]
+      - label: "Tree"
+        icon: "pi pi-fw pi-share-alt"
+        routerLink: [ "/uikit/tree" ]
+        permissions: [ "GRANT_APP" ]
+      - label: "Panel"
+        icon: "pi pi-fw pi-tablet"
+        routerLink: [ "/uikit/panel" ]
+        permissions: [ "GRANT_APP" ]
+      - label: "Overlay"
+        icon: "pi pi-fw pi-clone"
+        routerLink: [ "/uikit/overlay" ]
+        permissions: [ "GRANT_APP" ]
+      - label: "Media"
+        icon: "pi pi-fw pi-image"
+        routerLink: [ "/uikit/media" ]
+        permissions: [ "GRANT_APP" ]
+      - label: "Menu"
+        icon: "pi pi-fw pi-bars"
+        routerLink: [ "/uikit/menu" ]
+        permissions: [ "GRANT_APP" ]
+      - label: "Message"
+        icon: "pi pi-fw pi-comment"
+        routerLink: [ "/uikit/message" ]
+        permissions: [ "GRANT_APP" ]
+      - label: "File"
+        icon: "pi pi-fw pi-file"
+        routerLink: [ "/uikit/file" ]
+        permissions: [ "GRANT_APP" ]
+      - label: "Chart"
+        icon: "pi pi-fw pi-chart-bar"
+        routerLink: [ "/uikit/charts" ]
+        permissions: [ "GRANT_APP" ]
+      - label: "Timeline"
+        icon: "pi pi-fw pi-calendar"
+        routerLink: [ "/uikit/timeline" ]
+        permissions: [ "GRANT_APP" ]
+      - label: "Misc"
+        icon: "pi pi-fw pi-circle"
+        routerLink: [ "/uikit/misc" ]
+        permissions: [ "GRANT_APP" ]
+
+  - label: "Pages"
+    icon: "pi pi-fw pi-briefcase"
+    permissions: [ "GRANT_SUPER_ADMIN" ]
+    routerLink: [ "/pages" ]
+    items:
+      - label: "Landing"
+        icon: "pi pi-fw pi-globe"
+        routerLink: [ "/landing" ]
+        permissions: [ "GRANT_APP" ]
+      - label: "Auth"
+        icon: "pi pi-fw pi-user"
+        items:
+          - label: "Login"
+            icon: "pi pi-fw pi-sign-in"
+            routerLink: [ "/auth/login" ]
+            permissions: [ "GRANT_APP" ]
+          - label: "Error"
+            icon: "pi pi-fw pi-times-circle"
+            routerLink: [ "/auth/error" ]
+            permissions: [ "GRANT_APP" ]
+          - label: "Access Denied"
+            icon: "pi pi-fw pi-lock"
+            routerLink: [ "/auth/access" ]
+            permissions: [ "GRANT_APP" ]
+      - label: "Crud"
+        icon: "pi pi-fw pi-pencil"
+        routerLink: [ "/pages/crud" ]
+        permissions: [ "GRANT_APP" ]
+      - label: "Not Found"
+        icon: "pi pi-fw pi-exclamation-circle"
+        routerLink: [ "/pages/notfound" ]
+        permissions: [ "GRANT_APP" ]
+      - label: "Empty"
+        icon: "pi pi-fw pi-circle-off"
+        routerLink: [ "/pages/empty" ]
+        permissions: [ "GRANT_APP" ]
+
+  - label: "Hierarchy"
+    permissions: [ "GRANT_SUPER_ADMIN" ]
+    items:
+      - label: "Submenu 1"
+        permissions: [ "GRANT_APP" ]
+        icon: "pi pi-fw pi-bookmark"
+        items:
+          - label: "Submenu 1.1"
+            permissions: [ "GRANT_APP" ]
+            icon: "pi pi-fw pi-bookmark"
+            items:
+              - label: "Submenu 1.1.1"
+                permissions: [ "GRANT_APP" ]
+                icon: "pi pi-fw pi-bookmark"
+              - label: "Submenu 1.1.2"
+                permissions: [ "GRANT_APP" ]
+                icon: "pi pi-fw pi-bookmark"
+              - label: "Submenu 1.1.3"
+                permissions: [ "GRANT_APP" ]
+                icon: "pi pi-fw pi-bookmark"
+          - label: "Submenu 1.2"
+            permissions: [ "GRANT_APP" ]
+            icon: "pi pi-fw pi-bookmark"
+            items:
+              - label: "Submenu 1.2.1"
+                permissions: [ "GRANT_APP" ]
+                icon: "pi pi-fw pi-bookmark"
+      - label: "Submenu 2"
+        permissions: [ "GRANT_SUPER_ADMIN" ]
+        icon: "pi pi-fw pi-bookmark"
+        items:
+          - label: "Submenu 2.1"
+            permissions: [ "GRANT_APP" ]
+            icon: "pi pi-fw pi-bookmark"
+            items:
+              - label: "Submenu 2.1.1"
+                permissions: [ "GRANT_APP" ]
+                icon: "pi pi-fw pi-bookmark"
+              - label: "Submenu 2.1.2"
+                permissions: [ "GRANT_APP" ]
+                icon: "pi pi-fw pi-bookmark"
+          - label: "Submenu 2.2"
+            permissions: [ "GRANT_APP" ]
+            icon: "pi pi-fw pi-bookmark"
+            items:
+              - label: "Submenu 2.2.1"
+                permissions: [ "GRANT_APP" ]
+                icon: "pi pi-fw pi-bookmark"
